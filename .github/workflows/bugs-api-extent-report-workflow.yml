@@ -25,7 +25,7 @@ jobs:
         latest_report=$(ls -t reports/* | head -n1)
         echo "::set-output name=latest_report::$latest_report"
     - name: Upload Latest Modified Report
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: latest-report
         path: ${{ steps.find-latest-report.outputs.latest_report }}
